@@ -1,0 +1,11 @@
+<model package="StoreManager.src.Model" baseClass="xPDOObject" platform="mysql" defaultEngine="InnoDB" phpdoc-package="StoreManager.src.Model" version="1.1">
+
+	<object class="smStore" table="sm_store" extends="xPDOSimpleObject">
+		<field key="name" dbtype="varchar" precision="128" phptype="string" default="" comment="The name of the store." />
+		<field key="description" dbtype="text" phptype="string" default="" comment="Description of the store." />
+
+		<index alias="name" name="name" primary="false" unique="false" type="BTREE">
+			<column key="name" length="" collation="A" null="false" />
+		</index>
+	</object>
+</model>
